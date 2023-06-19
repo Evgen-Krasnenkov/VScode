@@ -15,6 +15,18 @@ body {
     background-color: #8cccf8;
 }
 
+@media (min-resolution: 100dpi) or (orientation: portrait){
+    body{
+        background-color: red;
+    }
+    
+}
+.picture {
+    box-sizing: border-box;
+    width: 50%;
+    border: 10px solid #000;
+}
+
 .box {
     position: relative;
     width: 300px;
