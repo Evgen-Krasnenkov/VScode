@@ -21,16 +21,17 @@ body {
     }
     
 }
-.picture {
-    box-sizing: border-box;
-    width: 50%;
-    border: 10px solid #000;
-}
 
 .box {
     position: relative;
     width: 300px;
 }
+.picture {
+    box-sizing: border-box;
+    height: 200px;
+    width: 50%;
+    border: 10px solid #000;
+} 
 
 .box .inputBox {
     position: relative;
