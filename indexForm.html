@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Work</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styleForm.css">
+</head>
+
+<body>
+    <h1>Forms Work</h1>
+    <form action="" method="post">
+        <div class="form-field">
+            Username: <br>
+            <input type="text" name="username" placeholder="enter user name" pattern="\w+">
+        </div>            
+        <div class="form-field">
+            EMail: <br>
+            <input type="email" name="email" value="my@test.com" readonly disabled>
+        </div>
+        <div class="form-field">                      
+            Password: <br>
+            <input type="password" name="password" required minlength="6" maxlength="10">
+        </div>
+        <label class="form-field">                      
+            <input type="checkbox" name="accepted" required value="yes">
+            I accept rules
+        </label> 
+        <div class="form-field">                      
+            <input 
+             id="remembe-me"
+             type="checkbox" 
+             name="remembe" 
+             required 
+             value="yes"
+             checked
+            >
+            <label for="remembe-me">Remembe me</label>
+        </div>       
+        <button type="submit">Send</button>
+        <button type="reset">Reset</button>
+        <button type="button">Button</button>
+    </form>
+
+</body>
+
+</html>
