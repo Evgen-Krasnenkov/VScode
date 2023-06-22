@@ -12,6 +12,21 @@
 
 <body>
     <h1>Forms Work</h1>
+    <label for="form-field">
+        Day of week:
+        <select name="weekday" id="" required multiple>
+            <option value="" disabled selected>Please choose</option>
+            <option value="mon">Monday</option>
+            <option value="tue">Tusday</option>
+            <option value="wed">Wednesday</option>
+            <option value="thu" selected>Thursday</option>
+            <option value="fri">Friday</option>
+            <option value="sat">Saturday</option>
+            <option value="sun">Sunday</option>
+        </select>
+    </label>
+    <label class="form-field" for="tele">Your cell phone number (format: 123-456-7890)</label>
+    <input type="tel" id="tele" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
     <form action="" method="post">
         <div class="form-field">
             Username: <br>
@@ -19,14 +34,28 @@
         </div>            
         <div class="form-field">
             EMail: <br>
-            <input type="email" name="email" value="my@test.com" readonly disabled>
+            <input type="email" name="email" value="my@test.com" readonly disabled tabindex="1">
         </div>
         <div class="form-field">                      
             Password: <br>
             <input type="password" name="password" required minlength="6" maxlength="10">
         </div>
+        <label class="form-field">
+            <input type="radio" name="sex" value="male">
+            Male
+        </label>
+        <label class="form-field">
+            <input type="radio" name="sex" value="female">
+            Female
+        </label>
+        <label class="form-field">
+            <input type="radio" name="sex" value="none" required checked>
+            Rather not to say
+        </label>       
+        <label for="tentcalless"> Number of years (3 - 9)</label> 
+        <input type="number" id="tentcalless" name="tentcalless" step="1" min="3" max="9">
         <label class="form-field">                      
-            <input type="checkbox" name="accepted" required value="yes">
+            <input type="checkbox" name="accepted" required value="yes" tabindex="-1">
             I accept rules
         </label> 
         <div class="form-field">                      
@@ -43,6 +72,17 @@
         <button type="submit">Send</button>
         <button type="reset">Reset</button>
         <button type="button">Button</button>
+        <label class="form-field">
+            Comments
+            <textarea 
+             name="description"
+             id=""
+             cols="30"
+             rows="10"
+             placeholder="Type your comments">
+            </textarea>
+        </label> 
+        <input type="hidden" name="csrf token" value="this is a token for csrf">
     </form>
 
 </body>
