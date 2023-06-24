@@ -9,7 +9,15 @@
 <body>
 <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="post">
     <fieldset>
-        <legend>Personal information</legend>        
+        <legend>Personal information</legend>   
+        <label>
+            <input type="radio" name="cat-love" value="yes">
+            Yes
+          </label>
+          <label>
+            <input type="radio" name="cat-love" value="no">
+            No
+          </label>     
         <label for="surname">Surname:</label>
         <input type="text" id="surname" name="surname">
         <br>
@@ -18,52 +26,47 @@
         <br>
         <label for="age">How old are You?</label>
         <input type="number" name="age" id="age" min="1" max="100" value="18"><br>
-        <label for="birthday">Full date of birth:</label>
+        <label for="birthday">Full date of birthday:</label>
         <input type="date" name="birthday" id="birthday"><br>
-        <label for="accepted">I accept the term of the agreement</label>
-        <input type="checkbox" name="accepted" id="accepted" required value="yes">
+        <label for="accepted">I accept the terms of the agreement</label>
+        <input type="checkbox" name="accepted" required value="yes">
 
     </fieldset>
     
     <fieldset>
         <legend>Registration</legend>
-        <label for="email">E-mail:</label>
-        <input type="email" name="email" id="email"
-               placeholder="email@example.com" required><br>
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" minlength="6" maxlength="30" required>
+        <label for="email">E-mail</label>
+        <input type="email" name="email" value="email@example.com"><br>
+        <label for="pswr">Password</label>
+        <input type="password" name="pswr" minlength="6" maxlength="30">
     </fieldset>
     
     <fieldset>
         <legend>An interesting fact about you!</legend>
-        Do you love cats?
-        <label class="form-field">
-          <input type="radio" name="cats" id="cats" value="yes">
-          Yes
-        </label>
-        <label class="form-field">
-          <input type="radio" name="cats" id="cats" value="no">
-          No
-        </label>     
+        <label for="cats">Do you love cats?</label>
+        <input type="radio" name="cats" value="yes">
+        Yes
+        <input type="radio" name="cats" value="no">
+        No
         <br>
         <label for="color">What is your favorite color?</label>        
-        <input type="color" name="color" id="color"><br>
-        <label for="time">What time do you go to bed?</label>
-        <input type="time" name="time" id="time" value="12:30"><br>
+        <input type="color"><br>
+        <label for="bed">What time do you go to bed?</label>
+        <input type="time" name="bed" value="12:30"><br>
         <label for="cars">What are your favorite brand of cars?</label>
         <select name="cars" id="cars" multiple>
             <option value="bmw">BMW</option>
             <option value="audi">Audi</option>
             <option value="skoda">Skoda</option>
         </select><br>
-        <label for="rate">How do you rate our work?</label>
-        <input type="range" name="rate" id="rate" step="1" value="0" min="0" max="5">
+        <label for="rate">How do you rate you work?</label>
+        <input type="range" name="rate" step="1" value="0" min="0" max="5">
     </fieldset>
     
     <fieldset>
         <legend>Additional info:</legend>
-        <label for="comments">Comments:</label>
-        <textarea name="comments" id="comments"></textarea> <br>
+        <label for="text">Comments:</label>
+        <input type="textarea"> <br>
         <label for="recommend">Would you recommend us?</label>
         <select name="recommend" id="recommend">
             <option value="yes" selected>yes</option>
